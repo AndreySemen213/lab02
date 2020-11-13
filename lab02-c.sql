@@ -1,6 +1,4 @@
-DELETE FROM soft;
-
-
+DELETE FROM employees;
 INSERT INTO employees (id, lname, fname, mname) VALUES
 	(1, 'Ivanov', 'Vasily', 'Petrovich'),
 	(2, 'Chelynin', 'Genagiy', 'Petrovich'),
@@ -13,6 +11,8 @@ INSERT INTO employees (id, lname, fname, mname) VALUES
 	(9, 'Shluz', 'Olga', 'Petrovich'),
 	(10, 'Gorbachev', 'Oleg', 'Viktorovich');
 
+
+DELETE FROM rooms;
 INSERT INTO rooms (id, num, emp_id) VALUES
 	(1, 101, 1),
 	(2, 102, 1),
@@ -30,6 +30,8 @@ INSERT INTO rooms (id, num, emp_id) VALUES
 	(14, 304, 9),
 	(15, 305, 10);
 
+
+DELETE FROM pcs;
 INSERT INTO pcs (id, room_id, note, ip_addr, mac_addr) VALUES
 	(100, 15, '', '192.168.0.29', '00-17-31-9B-00-00'),
 	(101, 1, '', '192.168.0.1', '00-17-31-9B-00-01'),
@@ -63,6 +65,7 @@ INSERT INTO pcs (id, room_id, note, ip_addr, mac_addr) VALUES
 	(129, 15, '', '192.168.0.29', '00-17-31-9B-00-1D');
 
 
+DELETE FROM soft;
 INSERT INTO soft (id, sname, ver, quant) VALUES
 	(1, 'WINDOWS', '1.0.10.5', 13),
 	(2, 'WINDOWS', '1.11.10.5', 5),
@@ -70,6 +73,8 @@ INSERT INTO soft (id, sname, ver, quant) VALUES
 	(4, 'LINUX', '1.0.23.5', 7),
 	(5, 'WINDOWS', '1.222.10.5', 45);
 
+
+DELETE FROM installs;
 INSERT INTO installs (pc_id, soft_id) VALUES
 	(100,1),
 	(101,1),
